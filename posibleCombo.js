@@ -17,9 +17,7 @@ function posibleCombo(input) {
 
     combos[letters[0]].forEach(element => {
         if (letters[1]) {
-            return combos[letters[1]].forEach(element2 => {
-                result.push(element + element2);
-            })
+            return combos[letters[1]].forEach(element2 => result.push(element + element2));
         }
 
         result.push(element);
@@ -28,5 +26,5 @@ function posibleCombo(input) {
     return result.join(', ');
 }
 
-let result = posibleCombo('93');
+let result = posibleCombo('23');
 console.log(result);
